@@ -12,7 +12,7 @@ const Footer = () => {
             <img 
               src={logoImage} 
               alt="Sarora Logo" 
-              className="w-16 mb-3 mx-auto md:mx-0 opacity-80"
+              className="w-12 mb-3 mx-auto md:mx-0 rounded-xl"
             />
             <h3 className="text-2xl font-serif mb-2">Sarora</h3>
             <p className="text-sm text-muted-foreground">

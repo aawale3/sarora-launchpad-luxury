@@ -8,13 +8,6 @@ import Footer from "@/components/Footer";
 import LogoProcessor from "@/components/LogoProcessor";
 
 const Index = () => {
-  // Set to true to show logo processor, false to show main site
-  const showLogoProcessor = true;
-
-  if (showLogoProcessor) {
-    return <LogoProcessor />;
-  }
-
   return (
     <main className="min-h-screen">
       <Hero />
