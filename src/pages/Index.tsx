@@ -5,8 +5,16 @@ import Pillars from "@/components/Pillars";
 import Waitlist from "@/components/Waitlist";
 import Instagram from "@/components/Instagram";
 import Footer from "@/components/Footer";
+import LogoProcessor from "@/components/LogoProcessor";
 
 const Index = () => {
+  // Set to true to show logo processor, false to show main site
+  const showLogoProcessor = true;
+
+  if (showLogoProcessor) {
+    return <LogoProcessor />;
+  }
+
   return (
     <main className="min-h-screen">
       <Hero />
