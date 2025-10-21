@@ -21,7 +21,7 @@ const Hero = () => {
           <img 
             src={logoImage} 
             alt="Sarora Logo" 
-            className="w-20 md:w-24 mb-6 rounded-2xl"
+            className="w-20 md:w-24 mb-6 rounded-2xl logo-animate"
           />
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif mb-6 tracking-tight">
             Sarora
