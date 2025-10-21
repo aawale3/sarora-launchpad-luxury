@@ -322,6 +322,13 @@
             }
         }
         
+        @media (min-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+        }
+        
         .gallery-item {
             aspect-ratio: 1;
             overflow: hidden;
@@ -329,15 +336,21 @@
             background-color: hsl(var(--muted));
         }
         
-        .gallery-item img {
+        .gallery-item img,
+        .gallery-item video {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.7s ease;
         }
         
-        .gallery-item:hover img {
+        .gallery-item:hover img,
+        .gallery-item:hover video {
             transform: scale(1.1);
+        }
+        
+        .gallery-item video {
+            background-color: hsl(var(--muted));
         }
         
         /* Waitlist Section */
@@ -520,7 +533,7 @@
                     <p>Each piece is thoughtfully designed to become part of your daily ritual—jewellery that feels as natural as it looks exceptional, crafted from the finest materials and inspired by the warm, minimalist beauty of the desert.</p>
                 </div>
                 <div class="about-image">
-                    <img src="./assets/lifestyle-2-Do3PzjF-.jpg" alt="Elegant Sarora jewelry worn by model in natural light">
+                    <img src="./assets/5C034DA1-A363-4795-B88D-F9CEE1FBF8D2_4_5005_c.jpeg" alt="Elegant Sarora jewelry worn by model in natural light">
                 </div>
             </div>
         </div>
@@ -535,10 +548,22 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="./assets/lifestyle-1-D2ovE8Ai.jpg" alt="Delicate gold bracelet and ring in luxury Scottsdale setting">
+                    <video autoplay muted loop playsinline poster="./assets/5F9F2EE4-BC0D-4108-9814-CA766BFE4375.poster.JPG">
+                        <source src="./assets/5F9F2EE4-BC0D-4108-9814-CA766BFE4375.mp4" type="video/mp4">
+                        <img src="./assets/5F9F2EE4-BC0D-4108-9814-CA766BFE4375.poster.JPG" alt="Sarora jewelry video">
+                    </video>
                 </div>
                 <div class="gallery-item">
-                    <img src="./assets/detail-rings-hf1bhc7B.jpg" alt="Close-up of 14k gold stacking rings with diamonds">
+                    <img src="./assets/51970CD0-74E9-400C-914B-78CEBF82A1F6.JPG" alt="Elegant Sarora jewelry collection">
+                </div>
+                <div class="gallery-item">
+                    <video autoplay muted loop playsinline poster="./assets/4DCA8D71-6114-45DA-82C8-2D12F19F6141.poster.JPG">
+                        <source src="./assets/4DCA8D71-6114-45DA-82C8-2D12F19F6141.mp4" type="video/mp4">
+                        <img src="./assets/4DCA8D71-6114-45DA-82C8-2D12F19F6141.poster.JPG" alt="Sarora jewelry video">
+                    </video>
+                </div>
+                <div class="gallery-item">
+                    <img src="./assets/41DB27A6-CC16-425C-BB6A-643A922D281D_4_5005_c.jpeg" alt="Close-up of Sarora jewelry details">
                 </div>
             </div>
         </div>
