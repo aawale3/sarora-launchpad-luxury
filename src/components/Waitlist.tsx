@@ -22,15 +22,33 @@ const Waitlist = () => {
 
     setIsLoading(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsLoading(false);
-      toast({
-        title: "Welcome to Sarora!",
-        description: "You're on the list. Check your inbox for exclusive previews.",
+    try {
+      const response = await fetch('https://formspree.io/f/xwprjoak', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
       });
-      setEmail("");
-    }, 1000);
+
+      if (response.ok) {
+        toast({
+          title: "Welcome to Sarora!",
+          description: "You're on the list. Check your inbox for exclusive previews.",
+        });
+        setEmail("");
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or contact us directly at info@sarora.com",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
