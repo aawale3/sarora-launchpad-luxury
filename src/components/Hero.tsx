@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-jewelry.jpg";
+import logoImage from "@/assets/sarora-logo.jpg";
 
 const Hero = () => {
   const scrollToWaitlist = () => {
@@ -17,6 +18,11 @@ const Hero = () => {
       
       <div className="container-custom section-padding relative z-10">
         <div className="max-w-2xl fade-in">
+          <img 
+            src={logoImage} 
+            alt="Sarora Logo" 
+            className="w-32 md:w-40 lg:w-48 mb-8 opacity-90"
+          />
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif mb-6 tracking-tight">
             Sarora
           </h1>

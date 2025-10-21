@@ -1,4 +1,5 @@
 import { Instagram } from "lucide-react";
+import logoImage from "@/assets/sarora-logo.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,6 +9,11 @@ const Footer = () => {
       <div className="container-custom py-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
+            <img 
+              src={logoImage} 
+              alt="Sarora Logo" 
+              className="w-16 mb-3 mx-auto md:mx-0 opacity-80"
+            />
             <h3 className="text-2xl font-serif mb-2">Sarora</h3>
             <p className="text-sm text-muted-foreground">
               Elegant fine jewellery from Scottsdale, Arizona
